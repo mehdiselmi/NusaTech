@@ -3,7 +3,7 @@ import Navbar from './components/Navbar'
 
 const App = () => {
   return (
-    <div>
+    <div className='text-[#F8F9FF]'>
       <Navbar/>
     </div>
   )
