@@ -17,10 +17,10 @@ const Hero = () => {
   return (
     <div>
       <section>
-        <div className="h-122 bg-accent flex text-center justify-center ">
+        <div className="min-h-122 bg-accent  flex text-center justify-center ">
           <div>
-            <div className=" text-center md:space-y-7 space-y-2 ">
-              <div className="md:text-7xl text-2xl flex flex-col gap-1 md:gap-3 md:mt-8 mt-12 font-bold">
+            <div className=" text-center md:space-y-7 space-y-8">
+              <div className="md:text-7xl text-2xl flex flex-col gap-3 md:mt-8 mt-12 font-bold">
                 <p>Drive Growth with Innovative </p>{" "}
                 <span className="text-primary ">
                   Digital Marketing Services
@@ -32,7 +32,7 @@ const Hero = () => {
                 <span>in one platform.</span>
               </p>
             </div>
-            <div className="mt-5">
+            <div className="md:mt-5 mt-10">
               <div>
                 <input
                   type="text"
@@ -41,7 +41,7 @@ const Hero = () => {
                 />
               </div>
             </div>
-            <div className="flex gap-5 mt-5  justify-center">
+            <div className="flex gap-5 md:mt-5  mt-8 justify-center">
               <Button
                 text="Start Now"
                 className="md:px-7.5 md:py-4 border-2 border-transparent hover:bg-transparent focus:bg-transparent active:bg-transparent transition-all duration-500 hover:border-primary focus:border-primary active:border-primary"
@@ -54,9 +54,10 @@ const Hero = () => {
           </div>
         </div>
       </section>
+      {/* company  */}
       <section>
-        <div className="text-center  bg-secondary h-70.5 pt-20 space-y-15 px-45 text-accent">
-          <div className="flex justify-between items-center gap-5">
+        <div className="text-center  bg-secondary min-h-70.5 md:pt-20 space-y-10 py-15 md:space-y-15  md:px-45 text-accent">
+          <div className="flex md:justify-between md:pt-0 pt-10 md:flex-row flex-col items-center gap-5">
             {support.map((item) => {
               return (
                 <div key={item.id} className="flex items-center gap-3">
