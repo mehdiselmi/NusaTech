@@ -2,8 +2,10 @@
 @import "tailwindcss";
 @theme{
   --color-primary:#AC6CFF;
+  --color-accent:#2F1C48;
   --color-secondary:#FBEBD7;
   --color-neutral:#2D2D2D;
+
 }
 *{
    font-family: "Roboto", sans-serif;

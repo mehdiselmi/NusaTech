@@ -5,7 +5,7 @@ const Button = ({ text, type = "button", className = "" }) => {
     <div>
       <button
         type={type}
-        className={`py-3 px-5  bg-primary outline-none cursor-pointer  rounded-2xl ${className}`}
+        className={`py-3 px-5  bg-primary outline-none cursor-pointer font-semibold rounded-2xl ${className}`}
       >
         {text}
       </button>

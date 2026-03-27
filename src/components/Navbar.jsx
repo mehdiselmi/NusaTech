@@ -3,7 +3,7 @@ import atomEditor from "../assets/Atom Editor.png";
 import Button from "../components/Button.jsx";
 const Navbar = () => {
   return (
-    <div className="bg-neutral  px-17.25 py-6.5 flex justify-between items-center">
+    <div className="bg-neutral  md:px-17.25 px-4 py-6.5 flex justify-between items-center">
       <div className="flex items-center gap-2">
         <img src={atomEditor} alt="" />
         <p className="font-semibold">Nusa Tech</p>
