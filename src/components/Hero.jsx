@@ -1,10 +1,11 @@
 import React from "react";
-import Button from "../components/Button.jsx";
+
 import vector from "../assets/Vector.png";
 import vector1 from "../assets/Vector1.png";
 import vector2 from "../assets/Vector2.png";
 import group from "../assets/Group.png";
 import path from "../assets/path.png";
+import { motion } from "motion/react";
 const Hero = () => {
   const support = [
     { id: 1, image: vector, name: "ripple" },
@@ -19,7 +20,12 @@ const Hero = () => {
       <section>
         <div className="min-h-122 bg-accent  flex text-center justify-center ">
           <div>
-            <div className=" text-center md:space-y-7 space-y-8">
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 1 }}
+              className=" text-center md:space-y-7 space-y-8"
+            >
               <div className="md:text-7xl text-2xl flex flex-col gap-3 md:mt-8 mt-12 font-bold">
                 <p>Drive Growth with Innovative </p>{" "}
                 <span className="text-primary ">
@@ -31,7 +37,7 @@ const Hero = () => {
                 social media marketing <br />
                 <span>in one platform.</span>
               </p>
-            </div>
+            </motion.div>
             <div className="md:mt-5 mt-10">
               <div>
                 <input
@@ -41,16 +47,30 @@ const Hero = () => {
                 />
               </div>
             </div>
-            <div className="flex gap-5 md:mt-5  mt-8 justify-center">
-              <Button
-                text="Start Now"
-                className="md:px-7.5 md:py-4 border-2 border-transparent hover:bg-transparent focus:bg-transparent active:bg-transparent transition-all duration-500 hover:border-primary focus:border-primary active:border-primary"
-              />
-              <Button
-                text="Learn More"
-                className="md:px-7.5 md:py-4 bg-transparent hover:scale-105 active:scale-105 focus:scale-105 transition-all duration-500 border-2 border-primary "
-              />
-            </div>
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              className="flex gap-5 md:mt-5  mt-8 justify-center"
+            >
+              <motion.button
+                whileHover={{ scale: 1.05, y: -2 }}
+                whileTap={{ scale: 1, y: 1 }}
+                transition={{ duration: 0.4 }}
+                className={`md:px-7.5 px-3 py-3 md:py-4 border-2 border-transparent hover:bg-transparent cursor-pointer bg-primary rounded-xl  hover:border-primary focus:border-primary active:border-primary`}
+              >
+                Start Now
+              </motion.button>
+
+              <motion.button 
+                whileHover={{ scale: 1.05, y: -2 }}
+                whileTap={{ scale: 1, y: 1 }}
+                transition={{ duration: 0.4 }}
+                className={`md:px-7.5 px-3 py-3 md:py-4 bg-transparent  border-2 cursor-pointer border-primary rounded-xl `}
+              >
+                Learn More
+              </motion.button>
+            </motion.div>
           </div>
         </div>
       </section>
@@ -60,14 +80,27 @@ const Hero = () => {
           <div className="flex md:justify-between md:pt-0 pt-10 md:flex-row flex-col items-center gap-5">
             {support.map((item) => {
               return (
-                <div key={item.id} className="flex items-center gap-3">
+                <motion.div
+                  initial={{ opacity: 0, x: 20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.8 }}
+                  key={item.id}
+                  className="flex items-center gap-3"
+                >
                   <img src={item.image} />
                   <p className="font-bold text-xl">{item.name}</p>
-                </div>
+                </motion.div>
               );
             })}
           </div>
-          <p className="text-accent text-xl">Trusted by 20,000+ companies </p>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-accent text-xl"
+          >
+            Trusted by 20,000+ companies{" "}
+          </motion.p>
         </div>
       </section>
     </div>
