@@ -2,6 +2,7 @@ import React from "react";
 import ellipse from "../assets/Ellipse.png";
 import ellipse1 from "../assets/Ellipse1.png";
 import ellipse2 from "../assets/Ellipse2.png";
+import {motion} from "motion/react"
 const Ressources = () => {
   const data = [
     {
@@ -28,7 +29,7 @@ const Ressources = () => {
   ];
   return (
     <section>
-      <div className=" bg-primary text-white py-10">
+      <div className=" bg-primary text-white py-20">
         <div className="  flex items-center">
           <p className="md:text-4xl text-xl px-10 md:pl-27.25 pb-18 font-semibold">
             What Our Customers say about Nusa Tech{" "}
@@ -38,7 +39,12 @@ const Ressources = () => {
 
         <div className="md:mx-27.25 mx-6  text-black grid grid-cols-1 gap-5  md:grid-cols-3 ">
           {data.map((item) => (
-            <div className="bg-secondary rounded-tr-xl p-7   h-70 rounded-bl-xl  w-[320px] ">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="bg-secondary rounded-tr-xl p-7   h-70 rounded-bl-xl  w-[320px] "
+            >
               <div className="flex gap-6 pb-7  items-center ">
                 <img src={item.image} className="rounded-full  w-20 " />
                 <div className="  ">
@@ -49,7 +55,7 @@ const Ressources = () => {
                 </div>
               </div>
               <p className="text-sm font-mono">{item.text}</p>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

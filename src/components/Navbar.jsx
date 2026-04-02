@@ -6,7 +6,7 @@ const Navbar = () => {
     <div className="bg-neutral  md:px-17.25 px-4 py-6.5 flex justify-between items-center">
       <div className="flex items-center gap-2">
         <img src={atomEditor} alt="" />
-        <p className="font-semibold">Nusa Tech</p>
+        <p className="font-semibold text-2xl">Nusa Tech</p>
       </div>
 
       <motion.ul

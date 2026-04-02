@@ -55,8 +55,8 @@ const Hero = () => {
             >
               <motion.button
                 whileHover={{ scale: 1.05, y: -2 }}
-                whileTap={{ scale: 1, y: 1 }}
-                transition={{ duration: 0.4 }}
+                whileTap={{ scale: 0.9, y: 1 }}
+                transition={{ type:"spring",stiffness:300,damping:15 }}
                 className={`md:px-7.5 px-3 py-3 md:py-4 border-2 border-transparent hover:bg-transparent cursor-pointer bg-primary rounded-xl  hover:border-primary focus:border-primary active:border-primary`}
               >
                 Start Now
@@ -65,7 +65,7 @@ const Hero = () => {
               <motion.button 
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 1, y: 1 }}
-                transition={{ duration: 0.4 }}
+                transition={{ type:"spring",stiffness:300,damping:15 }}
                 className={`md:px-7.5 px-3 py-3 md:py-4 bg-transparent  border-2 cursor-pointer border-primary rounded-xl `}
               >
                 Learn More

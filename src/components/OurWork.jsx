@@ -81,14 +81,19 @@ const OurWork = () => {
           <div className="md:w-230  mx-auto grid grid-cols-1 md:grid-cols-3 ">
             {data2.map((item) => {
               return (
-                <div className="md:w-70    space-y-2 flex justify-center items-center mt-15 flex-col">
+                <motion.div
+                  initial={{ opacity: 0,y:20 }}
+                  animate={{opacity:1,y:0}}
+                  transition={{duration:0.8}}
+                  className="md:w-70    space-y-2 flex justify-center items-center mt-15 flex-col"
+                >
                   <img
                     src={item.img}
                     className="bg-primary rounded-full w-20 p-4 "
                   />
                   <p className="text-2xl font-semibold">{item.total}</p>
                   <p>{item.text}</p>
-                </div>
+                </motion.div>
               );
             })}
           </div>
