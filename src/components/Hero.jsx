@@ -6,6 +6,7 @@ import vector2 from "../assets/Vector2.png";
 import group from "../assets/Group.png";
 import path from "../assets/path.png";
 import { motion } from "motion/react";
+import AnimatedButton from "./AnimatedButton";
 const Hero = () => {
   const support = [
     { id: 1, image: vector, name: "ripple" },
@@ -47,31 +48,25 @@ const Hero = () => {
                 />
               </div>
             </div>
-            <motion.div
+            <div
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
               className="flex gap-5 md:mt-5  mt-8 justify-center"
             >
-              <motion.button
-                whileHover={{ scale: 1.05, y: -2 }}
-                whileTap={{ scale: 0.9, y: 1 }}
-                transition={{ type:"spring",stiffness:300,damping:15 }}
+              <AnimatedButton
                 className={`md:px-7.5 px-3 py-3 md:py-4 border-2 border-transparent hover:bg-transparent cursor-pointer bg-primary rounded-xl  hover:border-primary focus:border-primary active:border-primary`}
               >
                 Start Now
-              </motion.button>
+              </AnimatedButton>
 
-              <motion.button 
-                whileHover={{ scale: 1.05, y: -2 }}
-                whileTap={{ scale: 1, y: 1 }}
-                transition={{ type:"spring",stiffness:300,damping:15 }}
+              <AnimatedButton
                 className={`md:px-7.5 px-3 py-3 md:py-4 bg-transparent  border-2 cursor-pointer border-primary rounded-xl `}
               >
                 Learn More
-              </motion.button>
-            </motion.div>
-          </div>
+              </AnimatedButton>
+            </div>
+          </div>{" "}
         </div>
       </section>
       {/* company  */}

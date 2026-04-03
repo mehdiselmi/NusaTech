@@ -5,7 +5,6 @@ const Pricing = () => {
     <section>
       <div className="bg-primary pt-25 min-h-400 md:min-h-185">
         <div className="text-center space-y-3">
-      
           <p className="text-4xl  font-semibold">Pricing Plans</p>
           <p className="text-xl">The Best Solution for Our Clients</p>
         </div>
@@ -25,7 +24,7 @@ const Pricing = () => {
               <li>Basic SEO</li>
               <li>Social media management </li>
             </ul>
-            <button className="px-6 hover:border-orange-400 hover:bg-transparent transition-all duration-500 border-2 border-transparent cursor-pointer py-2 bg-orange-400 text-lg ml-15 my-10 font-medium rounded-2xl">
+            <button className="px-6 hover:border-orange-400 hover:bg-transparent active:border-orange-400 active:bg-transparent transition-all duration-500 border-2 border-transparent cursor-pointer py-2 bg-orange-400 text-lg ml-15 my-10 font-medium rounded-2xl">
               book now
             </button>
           </div>
@@ -40,7 +39,7 @@ const Pricing = () => {
               <li>Social media management </li>
               <li>PPC advertising campaign </li>
             </ul>
-            <button className="px-6 hover:border-orange-400 hover:bg-transparent transition-all duration-500 border-2 border-transparent cursor-pointer py-2 bg-orange-400 text-lg ml-15 my-10 font-medium rounded-2xl">
+            <button className="px-6 active:border-orange-400 active:bg-transparent hover:border-orange-400 hover:bg-transparent transition-all duration-500 border-2 border-transparent cursor-pointer py-2 bg-orange-400 text-lg ml-15 my-10 font-medium rounded-2xl">
               book now
             </button>
           </div>
@@ -54,7 +53,7 @@ const Pricing = () => {
               <li>Regular content creation</li>
               <li>Performance analysis and monthly reporting </li>
             </ul>
-            <button className="px-6 hover:border-orange-400 hover:bg-transparent transition-all duration-500 border-2 border-transparent cursor-pointer py-2 bg-orange-400 text-lg ml-15 my-10 font-medium rounded-2xl">
+            <button className="px-6 active:border-orange-400 active:bg-transparent hover:border-orange-400 hover:bg-transparent transition-all duration-500 border-2 border-transparent cursor-pointer py-2 bg-orange-400 text-lg ml-15 my-10 font-medium rounded-2xl">
               book now
             </button>
           </div>

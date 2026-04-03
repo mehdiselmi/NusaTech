@@ -1,6 +1,6 @@
 import React from "react";
 import atomEditor from "../assets/Atom Editor.png";
-import { easeIn, motion } from "motion/react";
+import { easeIn, easeOut, motion } from "motion/react";
 const Navbar = () => {
   return (
     <div className="bg-neutral  md:px-17.25 px-4 py-6.5 flex justify-between items-center">
@@ -70,12 +70,13 @@ const Navbar = () => {
           <motion.button
             initial={{ opacity: 0, x: -10 }}
             animate={{ opacity: 1, x: 0 }}
+            whileTap={{scale:1,y:3,transition:{duration:0.4}}}
             whileHover={{
               scale: 1.05,
-              y: -1,
-              transition: { duration: 0.1, ease: easeIn },
+              y: -3,
+              transition: { type:"spring", stiffness:300 ,damping:15 },
             }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.8 ,ease:easeIn}}
             className={`py-3 px-5   outline-none cursor-pointer font-semibold rounded-2xl hover:text-white bg-transparent text-primary`}
           >
             Sign in
@@ -86,9 +87,9 @@ const Navbar = () => {
           animate={{ opacity: 1, x: 0 }}
           whileHover={{
             scale: 1.04,
-            transition: { duration: 0.3, ease: easeIn },
+            transition: {  type:"spring", stiffness:300 ,damping:8},
           }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.8 ,ease:easeIn}}
           className={`py-3 px-5   outline-none cursor-pointer font-semibold rounded-2xl hover:bg-transparent hover:border-2 hover:border-primary border-2 border-transparent bg-primary text-white`}
         >
           Sign Up
