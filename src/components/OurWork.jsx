@@ -8,6 +8,18 @@ import vector4 from "../assets/Vector4.png";
 import vector5 from "../assets/Vector5.png";
 import { motion } from "motion/react";
 const OurWork = () => {
+  const container = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: { staggerChildren: 0.3, delayChildren: 0.3 },
+    },
+  };
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 },
+  };
+
   const data1 = [
     {
       id: 1,
@@ -38,13 +50,18 @@ const OurWork = () => {
     },
   ];
   return (
-    <div>
+    <div id="Works">
       <section>
         <div className="pt-15 min-h-170 bg-secondary">
           <p className="font-semibold text-3xl text-neutral text-center">
             Why Choose Us?
           </p>
-          <div className="grid md:grid-cols-2 grid-cols-1 py-12 items-center  md:px-27.25">
+          <motion.div
+            variants={container}
+            initial="hidden"
+            animate="visible"
+            className="grid md:grid-cols-2 grid-cols-1 py-12 items-center  md:px-27.25"
+          >
             <div className="md:w-85 mx-auto w-60 ">
               <motion.img
                 initial={{ opacity: 0, x: -20 }}
@@ -57,9 +74,7 @@ const OurWork = () => {
               {data1.map((item) => {
                 return (
                   <motion.div
-                    initial={{ opacity: 0, x: 20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.8 }}
+                    variants={itemVariants}
                     className=" bg-accent flex items-center gap-5 mt-10 md:mt-4 md:py-6 md:px-5 md:w-150 mx-auto px-2 py-2 w-80 rounded-2xl"
                   >
                     <img
@@ -71,20 +86,25 @@ const OurWork = () => {
                 );
               })}
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
+
       {/* Work with Nusa Tech  */}
-      <section>
+
+      <section id="About">
         <div className="py-12  bg-accent text-center">
           <p className="font-bold text-3xl ">Work with Nusa Tech</p>
-          <div className="md:w-230  mx-auto grid grid-cols-1 md:grid-cols-3 ">
+          <motion.div
+            variants={container}
+            initial="hidden"
+            animate="visible"
+            className="md:w-230  mx-auto grid grid-cols-1 md:grid-cols-3 "
+          >
             {data2.map((item) => {
               return (
                 <motion.div
-                  initial={{ opacity: 0,y:20 }}
-                  animate={{opacity:1,y:0}}
-                  transition={{duration:0.8}}
+                  variants={itemVariants}
                   className="md:w-70    space-y-2 flex justify-center items-center mt-15 flex-col"
                 >
                   <img
@@ -96,7 +116,7 @@ const OurWork = () => {
                 </motion.div>
               );
             })}
-          </div>
+          </motion.div>
         </div>
       </section>
     </div>

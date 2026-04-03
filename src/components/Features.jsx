@@ -12,18 +12,23 @@ const Features = () => {
     { id: 3, image: email, text: "Email Marketing" },
   ];
   return (
-    <div className="min-h-125 bg-accent flex justify-center text-center pb-15 md:pb-0 pt-20">
+    <div
+      id="Features"
+      className="min-h-125 bg-accent flex justify-center text-center pb-15 md:pb-0 pt-20"
+    >
       <div className="space-y-6">
-        <p className="text-2xl font-bold">Services</p>
-        <motion.p
-          initial={{ opacity: 0, x: 20 }}
-          animate={{ opacity: 1, x: 0 }}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
           transition={{ duration: 0.8 }}
-          className="md:text-xl md:px-autp px-4 "
         >
-          Strategic services drive digital success with tailored, comprehensive
-          approaches.
-        </motion.p>
+          <p className="text-2xl font-bold mb-3">Services</p>
+          <p className="md:text-xl md:px-auto px-4 ">
+            Strategic services drive digital success with tailored,
+            comprehensive approaches.
+          </p>
+        </motion.div>
+
         <div className=" gap-5 pt-5 grid grid-cols-1  items-center md:grid-cols-4">
           {data.map((item) => {
             return (

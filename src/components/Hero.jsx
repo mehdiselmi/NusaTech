@@ -17,17 +17,17 @@ const Hero = () => {
     // { id: 6, image: {}, name: "" },
   ];
   return (
-    <div>
-      <section>
-        <div className="min-h-122 bg-accent  flex text-center justify-center ">
+    <div >
+      <section id="Home">
+        <div className="md:min-h-128 min-h-110 bg-accent md:mt-20 mt-17  flex text-center justify-center ">
           <div>
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 1 }}
-              className=" text-center md:space-y-7 space-y-8"
+              className=" text-center md:space-y-7 space-y-3"
             >
-              <div className="md:text-7xl text-2xl flex flex-col gap-3 md:mt-8 mt-12 font-bold">
+              <div className="md:text-7xl text-2xl flex flex-col md:gap-3  md:mt-8 mt-12 font-bold">
                 <p>Drive Growth with Innovative </p>{" "}
                 <span className="text-primary ">
                   Digital Marketing Services
@@ -89,8 +89,8 @@ const Hero = () => {
             })}
           </div>
           <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0,  }}
+            animate={{ opacity: 1,  }}
             transition={{ duration: 0.8 }}
             className="text-accent text-xl"
           >

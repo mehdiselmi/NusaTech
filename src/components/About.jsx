@@ -7,7 +7,7 @@ import AnimatedButton from "./AnimatedButton";
 import { motion } from "motion/react";
 const About = () => {
   return (
-    <div>
+    <div id="Ressources">
       {/* Quotes  */}
       <section className="bg-secondary text-black p-5 md:text-left text-center md:py-0  md:px-27.25 md:h-55  ">
         <div className="flex md:justify-between md:flex-row flex-col  items-center md:pt-17">

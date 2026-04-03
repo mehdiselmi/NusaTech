@@ -3,7 +3,7 @@ import { motion } from "motion/react";
 const Pricing = () => {
   return (
     <section>
-      <div className="bg-primary pt-25 min-h-400 md:min-h-185">
+      <div id="Pricing" className="bg-primary pt-25 min-h-400 md:min-h-185">
         <div className="text-center space-y-3">
           <p className="text-4xl  font-semibold">Pricing Plans</p>
           <p className="text-xl">The Best Solution for Our Clients</p>
@@ -19,7 +19,7 @@ const Pricing = () => {
             <p className="text-orange-400 font-bold text-3xl text-center py-5">
               $500
             </p>
-            <ul className="space-y-2 h-30">
+            <ul className="list-disc  space-y-2 h-30">
               <li>Responsive website design and development (5 pages)</li>
               <li>Basic SEO</li>
               <li>Social media management </li>
@@ -33,7 +33,7 @@ const Pricing = () => {
             <p className="text-orange-400 font-bold text-3xl text-center py-5">
               $1000
             </p>
-            <ul className="space-y-2 h-30 ">
+            <ul className="list-disc   space-y-2 h-30 ">
               <li> Responsive website design and development (10 pages)</li>
               <li>Advanced SEO</li>
               <li>Social media management </li>
@@ -48,7 +48,7 @@ const Pricing = () => {
             <p className="text-orange-400 font-bold text-3xl text-center py-5">
               $2000
             </p>
-            <ul className="space-y-2 h-30  ">
+            <ul className="list-disc space-y-2 h-30  ">
               <li>Advanced Business plan</li>
               <li>Regular content creation</li>
               <li>Performance analysis and monthly reporting </li>
