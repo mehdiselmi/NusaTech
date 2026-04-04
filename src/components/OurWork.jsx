@@ -6,6 +6,7 @@ import goal from "../assets/Goal.png";
 import vector3 from "../assets/Vector3.png";
 import vector4 from "../assets/Vector4.png";
 import vector5 from "../assets/Vector5.png";
+// eslint-disable-next-line no-unused-vars
 import { motion } from "motion/react";
 const OurWork = () => {
   const container = {

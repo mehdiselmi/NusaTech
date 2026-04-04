@@ -3,6 +3,7 @@ import laptop from "../assets/Laptop.png";
 import email from "../assets/Email.png";
 import paid from "../assets/Paid.png";
 import marketing from "../assets/marketing.png";
+// eslint-disable-next-line no-unused-vars
 import { motion } from "motion/react";
 const Features = () => {
   const container = {

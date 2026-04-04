@@ -5,6 +5,7 @@ import vector1 from "../assets/Vector1.png";
 import vector2 from "../assets/Vector2.png";
 import group from "../assets/Group.png";
 import path from "../assets/path.png";
+// eslint-disable-next-line no-unused-vars
 import { motion } from "motion/react";
 import AnimatedButton from "./AnimatedButton";
 const Hero = () => {

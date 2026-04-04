@@ -2,6 +2,7 @@ import React from "react";
 import ellipse from "../assets/Ellipse.png";
 import ellipse1 from "../assets/Ellipse1.png";
 import ellipse2 from "../assets/Ellipse2.png";
+// eslint-disable-next-line no-unused-vars
 import { motion } from "motion/react";
 const Ressources = () => {
   const container = {
@@ -53,7 +54,10 @@ const Ressources = () => {
           className="md:mx-27.25 mx-6  text-black grid grid-cols-1 gap-5  md:grid-cols-3 "
         >
           {data.map((item) => (
-            <motion.div variants={itemVariants} className="bg-secondary rounded-tr-xl p-7   h-70 rounded-bl-xl  w-[320px] ">
+            <motion.div
+              variants={itemVariants}
+              className="bg-secondary rounded-tr-xl p-7   h-70 rounded-bl-xl  w-[320px] "
+            >
               <div className="flex gap-6 pb-7  items-center ">
                 <img src={item.image} className="rounded-full  w-20 " />
                 <div className="  ">

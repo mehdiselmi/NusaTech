@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import atomEditor from "../assets/Atom Editor.png";
+// eslint-disable-next-line no-unused-vars
 import { easeIn, easeOut, motion } from "motion/react";
 import { IoMdMenu } from "react-icons/io";
 const Navbar = () => {

@@ -4,6 +4,7 @@ import phone from "../assets/phone.png";
 import mobile from "../assets/mobile.png";
 import location from "../assets/location.png";
 import AnimatedButton from "./AnimatedButton";
+// eslint-disable-next-line no-unused-vars
 import { motion } from "motion/react";
 const About = () => {
   return (
@@ -22,7 +23,7 @@ const About = () => {
           <AnimatedButton
             className={`text-white bg-orange-400 cursor-pointer rounded-2xl font-semibold  px-4 outline-none border-2 border-transparent hover:border-amber-400 hover:bg-transparent hover:text-black active:border-amber-400 active:bg-transparent active:text-black py-3`}
           >
-            Strat Now
+            Start Now
           </AnimatedButton>
         </div>
         <motion.p
