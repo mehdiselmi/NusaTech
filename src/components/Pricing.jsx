@@ -1,6 +1,15 @@
 import React from "react";
 import { motion } from "motion/react";
 const Pricing = () => {
+  const container = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { staggerChildren: 0.2, delayChildren: 0.2 },
+    },
+  };
+  const itemVariants = { hidden: { opacity: 0 }, visible: { opacity: 1 } };
   return (
     <section>
       <div id="Pricing" className="bg-primary pt-25 min-h-400 md:min-h-185">
@@ -9,12 +18,15 @@ const Pricing = () => {
           <p className="text-xl">The Best Solution for Our Clients</p>
         </div>
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          variants={container}
+          initial="hidden"
+          animate="visible"
           className=" grid grid-cols-1 md:grid-cols-3 mx-6 md:mx-27.25"
         >
-          <div className="bg-secondary rounded-2xl px-8 py-10  mt-15  w-80 h-95 text-black">
+          <motion.div
+            variants={itemVariants}
+            className="bg-secondary rounded-2xl px-8 py-10  mt-15  w-80 h-95 text-black"
+          >
             <p className="text-3xl font-semibold text-center ">Starter Plan</p>
             <p className="text-orange-400 font-bold text-3xl text-center py-5">
               $500
@@ -27,8 +39,11 @@ const Pricing = () => {
             <button className="px-6 hover:border-orange-400 hover:bg-transparent active:border-orange-400 active:bg-transparent transition-all duration-500 border-2 border-transparent cursor-pointer py-2 bg-orange-400 text-lg ml-15 my-10 font-medium rounded-2xl">
               book now
             </button>
-          </div>
-          <div className="bg-secondary rounded-2xl px-8 py-10  mt-15  w-80 h-95 text-black">
+          </motion.div>
+          <motion.div
+            variants={itemVariants}
+            className="bg-secondary rounded-2xl px-8 py-10  mt-15  w-80 h-95 text-black"
+          >
             <p className="text-3xl font-semibold text-center ">Business Plan</p>
             <p className="text-orange-400 font-bold text-3xl text-center py-5">
               $1000
@@ -42,8 +57,11 @@ const Pricing = () => {
             <button className="px-6 active:border-orange-400 active:bg-transparent hover:border-orange-400 hover:bg-transparent transition-all duration-500 border-2 border-transparent cursor-pointer py-2 bg-orange-400 text-lg ml-15 my-10 font-medium rounded-2xl">
               book now
             </button>
-          </div>
-          <div className="bg-secondary rounded-2xl px-8 py-10  mt-15  w-80 h-95 text-black">
+          </motion.div>
+          <motion.div
+            variants={itemVariants}
+            className="bg-secondary rounded-2xl px-8 py-10  mt-15  w-80 h-95 text-black"
+          >
             <p className="text-3xl font-semibold text-center ">Premium Plan</p>
             <p className="text-orange-400 font-bold text-3xl text-center py-5">
               $2000
@@ -56,7 +74,7 @@ const Pricing = () => {
             <button className="px-6 active:border-orange-400 active:bg-transparent hover:border-orange-400 hover:bg-transparent transition-all duration-500 border-2 border-transparent cursor-pointer py-2 bg-orange-400 text-lg ml-15 my-10 font-medium rounded-2xl">
               book now
             </button>
-          </div>
+          </motion.div>
         </motion.div>
       </div>
     </section>

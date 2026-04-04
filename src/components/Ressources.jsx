@@ -2,8 +2,17 @@ import React from "react";
 import ellipse from "../assets/Ellipse.png";
 import ellipse1 from "../assets/Ellipse1.png";
 import ellipse2 from "../assets/Ellipse2.png";
-import {motion} from "motion/react"
+import { motion } from "motion/react";
 const Ressources = () => {
+  const container = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { staggerChildren: 0.2, delayChildren: 0.2 },
+    },
+  };
+  const itemVariants = { hidden: { opacity: 0 }, visible: { opacity: 1 } };
   const data = [
     {
       id: 1,
@@ -37,14 +46,14 @@ const Ressources = () => {
           <div className="h-1.5 bg-white w-35 mb-15 ml-3 hidden md:flex"></div>
         </div>
 
-        <div className="md:mx-27.25 mx-6  text-black grid grid-cols-1 gap-5  md:grid-cols-3 ">
+        <motion.div
+          variants={container}
+          initial="hidden"
+          animate="visible"
+          className="md:mx-27.25 mx-6  text-black grid grid-cols-1 gap-5  md:grid-cols-3 "
+        >
           {data.map((item) => (
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="bg-secondary rounded-tr-xl p-7   h-70 rounded-bl-xl  w-[320px] "
-            >
+            <motion.div variants={itemVariants} className="bg-secondary rounded-tr-xl p-7   h-70 rounded-bl-xl  w-[320px] ">
               <div className="flex gap-6 pb-7  items-center ">
                 <img src={item.image} className="rounded-full  w-20 " />
                 <div className="  ">
@@ -57,7 +66,7 @@ const Ressources = () => {
               <p className="text-sm font-mono">{item.text}</p>
             </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

@@ -111,7 +111,7 @@ const About = () => {
           </div>{" "}
           <div className="flex items-center justify-between   mt-7">
             <p className="text-sm md:text-lg">
-              Nusa tech 2024 © All right reserved
+              Nusa tech 2026 © All right reserved
             </p>
             <p className="text-sm md:text-lg">Terms & Condition</p>
           </div>
